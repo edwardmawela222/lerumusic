@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leru La Mahlogonolo</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+html{scroll-behavior:smooth;}
+body{
+background:#050505;
+color:#fff;
+font-family:'Inter',sans-serif;
+overflow-x:hidden;
+}
+.heading{font-family:'Oswald',sans-serif;}
+.cyan{color:#00d9ff;}
+.pink{color:#ff2d7a;}
+
+.texture{
+background-image:
+radial-gradient(circle at 15% 15%, rgba(255,45,122,.05), transparent 30%),
+radial-gradient(circle at 85% 20%, rgba(0,217,255,.05), transparent 30%);
+}
+
+.glass{
+background:rgba(255,255,255,.025);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.08);
+}
+
+.cyan-border{
+border:1px solid rgba(0,217,255,.15);
+}
+
+.section-title{
+font-family:'Oswald',sans-serif;
+font-size:clamp(2.2rem,7vw,4.5rem);
+line-height:.95;
+letter-spacing:.05em;
+}
+
+.hero-glow{
+position:absolute;
+width:350px;
+height:350px;
+background:rgba(0,217,255,.08);
+filter:blur(120px);
+border-radius:999px;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+
+.reveal{
+opacity:0;
+transform:translateY(30px);
+transition:1s;
+}
+
+.reveal.show{
+opacity:1;
+transform:none;
+}
+
+.nav-link{
+position:relative;
+font-size:.9rem;
+text-transform:uppercase;
+letter-spacing:.08em;
+}
+
+.nav-link:after{
+content:'';
+position:absolute;
+left:0;
+bottom:-4px;
+width:0;
+height:2px;
+background:#00d9ff;
+transition:.3s;
+}
+
+.nav-link:hover:after{
+width:100%;
+}
+
+input,textarea{
+outline:none;
+transition:.3s;
+}
+
+input:focus,textarea:focus{
+border-color:#00d9ff;
+box-shadow:0 0 0 4px rgba(0,217,255,.12);
+}
+
+@media(max-width:768px){
+.hero-glow{
+width:220px;
+height:220px;
+}
+}
+</style>
+</head>
+
+<body class="texture">
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-xl border-b border-white/5">
+<div class="max-w-7xl mx-auto px-5">
+<div class="flex justify-between items-center h-20">
+<h2 class="heading text-2xl tracking-widest">LERU</h2>
+
+<div class="hidden md:flex gap-8">
+<a href="#about" class="nav-link">About</a>
+<a href="#journey" class="nav-link">Journey</a>
+<a href="#music" class="nav-link">Music</a>
+<a href="#bookings" class="nav-link">Bookings</a>
+</div>
+
+<button id="menuBtn" class="md:hidden text-2xl">☰</button>
+</div>
+
+<div id="mobileMenu" class="hidden md:hidden pb-6 flex flex-col gap-4 text-center">
+<a href="#about">About</a>
+<a href="#journey">Journey</a>
+<a href="#music">Music</a>
+<a href="#bookings">Bookings</a>
+</div>
+</div>
+</nav>
+
+<section class="min-h-screen flex items-center pt-24">
+<div class="max-w-7xl mx-auto px-5 w-full">
+<div class="grid lg:grid-cols-2 gap-14 items-center">
+
+<div>
+<p class="uppercase tracking-[6px] text-xs cyan mb-5">
+South African Artist
+</p>
+
+<h1 class="heading text-4xl sm:text-6xl md:text-8xl leading-[0.95]">
+LERU LA<br>
+<span class="pink">MAHLOGONOLO</span>
+</h1>
+
+<div class="w-28 h-1 bg-cyan-400 my-8"></div>
+
+<p class="text-zinc-300 text-lg max-w-xl leading-relaxed">
+A singer, songwriter and storyteller whose music explores faith, healing, love and reflection through a distinctly African lens.
+</p>
+
+<div class="flex flex-wrap gap-4 mt-10">
+<a href="#music" class="px-7 py-4 bg-cyan-400 text-black rounded-full font-semibold">
+Listen
+</a>
+
+<a href="#bookings" class="px-7 py-4 border border-pink-500 rounded-full">
+Book Leru
+</a>
+</div>
+</div>
+
+<div class="relative">
+<div class="hero-glow"></div>
+<img src="leru.jpg" class="relative w-full rounded-2xl cyan-border" alt="Leru">
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="about" class="py-24 reveal">
+<div class="max-w-4xl mx-auto px-5 text-center">
+<h2 class="section-title mb-8">THE STORY</h2>
+<p class="text-zinc-300 text-lg leading-loose">
+Leru La Mahlogonolo is an emerging South African artist whose music blends powerful vocals, spiritual depth and authentic storytelling. Rooted in Limpopo and inspired by life's journey, his music speaks to listeners seeking hope, healing and meaning.
+</p>
+</div>
+</section>
+
+<section id="journey" class="py-24 reveal">
+<div class="max-w-7xl mx-auto px-5">
+
+<h2 class="section-title text-center mb-5">THE JOURNEY</h2>
+
+<p class="text-center text-zinc-400 max-w-2xl mx-auto mb-16">
+Moments that shaped the voice, vision and story behind Leru La Mahlogonolo.
+</p>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="glass rounded-3xl overflow-hidden">
+<img src="leru2.jpg" class="w-full h-80 object-cover">
+<div class="p-6">
+<h3 class="heading text-2xl">THE BEGINNING</h3>
+<p class="text-zinc-400 mt-3">Discovering purpose through music.</p>
+</div>
+</div>
+
+<div class="glass rounded-3xl overflow-hidden">
+<img src="leru3.jpg" class="w-full h-80 object-cover">
+<div class="p-6">
+<h3 class="heading text-2xl">THE PROCESS</h3>
+<p class="text-zinc-400 mt-3">Writing, recording and growth.</p>
+</div>
+</div>
+
+<div class="glass rounded-3xl overflow-hidden">
+<img src="leru4.jpg" class="w-full h-80 object-cover">
+<div class="p-6">
+<h3 class="heading text-2xl">THE VISION</h3>
+<p class="text-zinc-400 mt-3">Faith, healing and hope.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="music" class="py-24 bg-zinc-950 reveal">
+<div class="max-w-7xl mx-auto px-5">
+
+<h2 class="section-title text-center">MUSIC</h2>
+
+<div class="grid md:grid-cols-3 gap-6 mt-16">
+
+<div class="glass rounded-3xl p-8">
+<h3 class="heading text-3xl cyan mb-3">LESEDI</h3>
+<p class="text-zinc-400">Light • Purpose • Hope</p>
+</div>
+
+<div class="glass rounded-3xl p-8">
+<h3 class="heading text-3xl cyan mb-3">MEOKGO</h3>
+<p class="text-zinc-400">Reflection • Healing</p>
+</div>
+
+<div class="glass rounded-3xl p-8">
+<h3 class="heading text-3xl cyan mb-3">MARU</h3>
+<p class="text-zinc-400">Faith • Journey</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="py-24 bg-black">
+<div class="max-w-4xl mx-auto px-5 text-center">
+<p class="heading text-4xl md:text-6xl leading-tight">
+"Music is where healing, memory and faith meet."
+</p>
+
+<p class="mt-8 text-zinc-500 uppercase tracking-[4px]">
+Leru La Mahlogonolo
+</p>
+</div>
+</section>
+
+<section id="bookings" class="py-24 reveal">
+<div class="max-w-4xl mx-auto px-5">
+
+<h2 class="section-title text-center mb-5">BOOKINGS</h2>
+
+<p class="text-center text-zinc-400 mb-12">
+Available for festivals, private events, collaborations and media appearances.
+</p>
+
+<form id="bookingForm" class="space-y-5">
+
+<input id="name" type="text" required placeholder="Your Name"
+class="w-full p-4 rounded-2xl bg-zinc-900 border border-zinc-700">
+
+<input id="event" type="text" placeholder="Event Name"
+class="w-full p-4 rounded-2xl bg-zinc-900 border border-zinc-700">
+
+<input id="location" type="text" placeholder="Event Location"
+class="w-full p-4 rounded-2xl bg-zinc-900 border border-zinc-700">
+
+<textarea id="message" rows="6"
+placeholder="Tell us about your event..."
+class="w-full p-4 rounded-2xl bg-zinc-900 border border-zinc-700"></textarea>
+
+<button type="submit"
+class="w-full py-4 bg-cyan-400 text-black rounded-2xl font-semibold">
+Send Booking Request
+</button>
+
+</form>
+
+</div>
+</section>
+
+<footer class="py-16 border-t border-white/10 text-center text-zinc-500">
+<p>© 2026 Leru La Mahlogonolo</p>
+</footer>
+
+<a href="https://wa.me/27790125359"
+target="_blank"
+class="fixed bottom-5 right-5 z-50 bg-green-500 text-white px-5 py-4 rounded-full shadow-lg">
+WhatsApp
+</a>
+
+<script>
+document.getElementById('bookingForm').addEventListener('submit', function(e){
+
+e.preventDefault();
+
+const name=document.getElementById('name').value;
+const eventName=document.getElementById('event').value;
+const location=document.getElementById('location').value;
+const message=document.getElementById('message').value;
+
+const text=`BOOKING REQUEST
+
+Name: ${name}
+
+Event: ${eventName}
+
+Location: ${location}
+
+Details:
+${message}`;
+
+window.open(
+`https://wa.me/27790125359?text=${encodeURIComponent(text)}`,
+'_blank'
+);
+});
+
+const menuBtn=document.getElementById('menuBtn');
+const mobileMenu=document.getElementById('mobileMenu');
+
+menuBtn.addEventListener('click',()=>{
+mobileMenu.classList.toggle('hidden');
+});
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+},{threshold:.15});
+
+document.querySelectorAll('.reveal').forEach(section=>{
+observer.observe(section);
+});
+</script>
+
+</body>
+</html>
